@@ -1,0 +1,22 @@
+Name: My Pet App
+on:
+  push:
+    branches:
+    _main:
+jobs:
+ build:
+    runs-on:ubuntu-latest
+    steps:
+     -name:Checkout code
+     uses:actions/checkout@v2
+    -name: set up JDK
+     uses:actions/checkout@v2
+     with:
+        java-version:'11'
+    -name:Build with Gradle
+     run:./gradlew build 
+     -name:Run Tests
+      run:.gradlew test
+      
+     
+        
